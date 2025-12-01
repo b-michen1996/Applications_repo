@@ -1,0 +1,224 @@
+%%%%%%%%%%%%%%%%% PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Change the font size of your document - 10pt, 12.1pt, etc.
+\documentclass[letterpaper,11pt,oneside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage[colorlinks, citecolor = blue, linkcolor = red, urlcolor = blue]{hyperref}
+\usepackage{comment}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{xcolor}
+
+\usepackage{graphicx}
+\graphicspath{ {images/}} %upload your signature to this file
+%Change the margins to fit your CV/resume content
+\usepackage[left=1in, right=1in, bottom=1.25in, top=1.25in]{geometry}
+
+%Skype information - include your Skype name for a link to add you on Skype
+\newcommand*{\Skype}{\href{skype:john.smith?add}{john.smith}} 
+\newcommand{\Absender}[1][\normalsize]{\Skype} 
+\newcommand{\fscv}{\normalsize} 
+
+%Changes the page numbers - {arabic}=arabic numerals, {gobble}=no page numbers, {roman}=Roman numerals
+\pagenumbering{gobble}
+
+%%%%%%%%%%%%%%%%% END OF PREAMBLE %%%%%%%%%%%%%%%%%%%%%
+\def\CC{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\bf ++}}}
+
+\begin{document}
+
+\setlength\parindent{0cm}
+\pagenumbering{gobble} %cover letter should be one page, {gobble}=no page number
+
+
+
+\begin{flushleft}
+ \textbf{To the Application Committee}         \\
+Max-Planck-Institut für Physik komplexer Systeme\\
+Nöthnitzer Straße 38  \\
+01187 Dresden, Germany
+\end{flushleft}
+
+\vspace{2em}
+
+Dear Committee, 
+\vspace{1em} 
+
+I hereby apply for a postdoctoral position in the Visitors Program of the MPIPKS. I am convinced that I can make significant contributions to the broad research profile at MPIPKS with my expertise in transport and dynamics in topological quantum matter.
+\vspace{1em} 
+
+During my master's and doctoral research in the Quantum Many-Body Theory Group at TU Dresden under the supervision of Professor Jan Carl Budich, I acquired a broad base of knowledge and research expertise. This includes topological concepts and their application to physical systems under adiabatic as well as periodic driving, experience in modeling quantum transport through nanoscale devices, and a versatile toolbox of analytical and numerical methods for quantum many-body physics. Moreover, I became adept at working independently and at efficiently acquiring new theoretical and computational techniques. I believe that this provides a strong foundation for my postdoctoral research at MPIPKS. 
+\vspace{1em} 
+
+After my formative experience at TU Dresden, I am eager to take on new scientific challenges and to further develop my scientific profile. The diverse and stimulating environment of the MPIPKS, in my view, would be ideal for this. In addition, several intriguing new directions have emerged from my recent research projects, and I am enthusiastic about pursuing them further. As outlined in the accompanying research proposal, these directions naturally align with the scope of multiple research groups at MPIPKS, with particular reference to the groups led by Dr.~Bukov, Dr.~\v{S}mejkal, and Prof.~Dr.~Moessner.
+\vspace{1em}
+
+Please find attached my CV, publication list, and research proposal. I would be delighted to join the MPIPKS and look forward to your response.
+ 
+\begin{flushleft}
+Sincerely, \\
+\vspace{1em} 
+Benjamin Michen\\
+\end{flushleft}
+
+
+\newpage
+
+%%%%%%%%%%%%%%%%% NAME OF APPLICANT %%%%%%%%%%%%%%%%%%%
+
+\noindent  \LARGE{\textbf{Curriculum Vitae}} \\
+\noindent  \LARGE{\textbf{Benjamin Michen}} \\
+\vspace{-2ex} 
+\hrule 
+\normalsize
+
+%%%%%%%%%%%%%%%%% CONTACT INFORMATION %%%%%%%%%%%%%%%%%
+% Your email address, website, and Skype name are links to send email, open your website and add you on Skype. 
+
+\begin{center}
+\begin{tabular}{r l r l}
+Date of birth: & September 2, 1996 & \hspace{0.25in}	Email: & \href{benjamin.michen@tu-dresden.de}{benjamin.michen@tu-dresden.de} \\
+Address: & Clara-Viebig Str.~3,  & \hspace{0.25in} Phone: & +49 178 8723598  \\
+& 01159 Dresden, Germany 
+\end{tabular}
+\end{center}
+
+\vspace{1em}
+
+%%%%%%%%%%%%%%%%% MAIN BODY %%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The main body is contained in a tabular environment. To move sections onto the next page, simply end the tabular environment and begin a new tabular environment.
+\noindent \begin{tabular}{@{} l l }
+\begin{comment}
+\makecell[tl]{\Large{Personal} \\\Large{Information}} & \begin{tabular}[t]{@{} l l}
+Name: & Benjamin Michen\\
+Date of birth: & September 2, 1996\\
+Address: & Clara-Viebig Str.~3, 01159 Dresden, Germany \\
+Email: & \href{benjamin.michen@tu-dresden.de}{benjamin.michen@tu-dresden.de} \\
+Phone: & +49 178 8723598
+\end{tabular}
+\\
+& \\
+\end{comment}
+\fscv{Education} & \textbf{Abitur} with overall grade 1.4 at J.-G.-Herder Gymnasium Pirna from 2013--2015. \\
+&\\
+&\textbf{BSc, Physics} with overall grade 1.6 at TU Dresden from 2016--2019. Bachelor  \\
+&thesis ``Bulk Transport Properties of HgTe nanostructures'' with Prof.~Carsten \\
+&Timm.\\
+&\\
+&\textbf{MSc, Physics} with overall grade 1.0 at TU Dresden from 2019--2021. Master \\
+&thesis ``Disorder-Induced Exceptional Non-Hermitian Phases in Mesoscopic \\
+&Quantum Systems'' with Prof.~Jan Carl Budich.\\
+& \\
+&\textbf{PhD, Physics} at TU Dresden from 2021--2025 with Prof.~Jan Carl Budich. \\
+&Dissertation ``Nuding Quantum Matter over the Edge of Topological Order'' \\
+&submitted November 2025. Currently under review and defense anticipated in\\
+& early 2026. \\
+& \\
+\fscv{Research} & \textbf{Quantum Many-Body Theory Group, TU Dresden} \\
+\fscv{Experience} & Master and doctoral research under Prof. Budich, 2020--2025, please see also the \\
+&list of publications below.\\
+&\\
+
+\fscv{Teaching} & \textbf{Technische Universität Dresden} \\
+\fscv{Experience} & Teaching assistant for several theoretical physics classes. \\
+& \\
+\fscv{Languages} & German (native), English (fluent), Spanish (basic, level B1). \\
+\fscv{and Skills} & Coding experience with Python, Julia, \CC, and Mathematica. \\
+& Usage of standard libraries for quantum physics, in particular ITensor, Kwant, 
+\\& and QuSpin.  \\
+& Experience with analytical methods for quantum many-body physics, such as 
+\\&bosonization  and perturbation theory.\\
+\\
+\fscv{Other} & Work \& Travel in New Zeland during gap year from 2015--2016.\\
+\fscv{Experience} & Student job at Fraunhofer FEP Dresden from 2018--2021, responsible for carrying\\
+&out and documenting electron beam experiments and numerical simulations of\\
+& electromagnetic lenses.\\
+\end{tabular}
+
+\clearpage
+
+
+\renewcommand\refname{\LARGE List of Publications}
+
+\begin{thebibliography}{Paper VII*}
+
+\bibitem[Paper I]{Paper_I}
+B. Michen, T. Micallo, and J.C. Budich, {\em Exceptional non-Hermitian phases in disordered quantum wires}, \href{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.104.035413}{Phys. Rev. B {\bfseries{104}} (3), 035413 (2021)}.
+
+\bibitem[Paper II]{Paper_II}
+B. Michen and J.C. Budich, {\em Mesoscopic transport signatures of disorder-induced non-Hermitian phases}, \href{https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.4.023248}{Phys. Rev. Res. {\bfseries{4}} (2), 023248 (2022)}.
+
+\bibitem[Paper III]{Paper_III}
+B. Michen, C. Repellin, and J.C. Budich, {\em Adiabatic preparation of fractional Chern insulators from an effective thin-torus limit}, \href{https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.5.023100}{Phys. Rev. Res. {\bfseries{5}} (2), 023100 (2023)}.
+
+\bibitem[Paper IV\textsuperscript{*}]{Paper_IV}
+B. Michen and J.C. Budich, {\em Nonlinear interference challenging topological protection of chiral edge states}, \href{https://journals.aps.org/pra/abstract/10.1103/PhysRevA.108.L021501}{Phys. Rev. A {\bfseries{108}} (2), L021501 (2023)}.
+
+\bibitem[Paper V]{Paper_V}
+J. Schwardt, B. Michen, C. Lehmann, and J.C. Budich, {\em Exceptional Luttinger liquids from sublattice-dependent interaction}, \href{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.110.245146}{Phys. Rev. B {\bfseries{110}} (24), 245146 (2024)}.
+
+\bibitem[Paper VI]{Paper_VI}
+B. Michen, T. Pokart, and J.C. Budich, {\em Adiabatic preparation of a number-conserving atomic Majorana phase}, \href{https://journals.aps.org/prb/abstract/10.1103/dqsb-nzx1}{Phys. Rev. B {\bfseries{112}} (4), 045112 (2025)}.
+
+\bibitem[Paper VII\textsuperscript{*}]{Paper_VII}
+B. Michen and J.C. Budich, {\em Quantum Hall Effect without Chern Bands}, \href{https://journals.aps.org/prl/abstract/10.1103/dgd8-4gzf}{Phys. Rev. Lett. {\bfseries{135}} (18), 186603 (2025)}.   
+
+\end{thebibliography}
+
+\vspace{1cm}
+
+\noindent  {\LARGE{\textbf{Research Interests}}} \\
+
+One of my current research interests lies in the interplay between disorder and topology (see \cite{Paper_VII} in the publication list above). A second focus concerns topological effects arising from periodic driving and their possible interrelation with nonlinear phenomena (see \cite{Paper_IV}). More generally, I am also interested in topological phases emerging from strong correlations and their adiabatic preparation in quantum simulators \cite{Paper_III, Paper_VI} as well as in quantum transport phenomena \cite{Paper_I, Paper_II, Paper_VII}. Furthermore, I have experience with non-Hermitian topology \cite{Paper_I, Paper_II, Paper_V}, although my current research focus has shifted away from this area. In the following, I will outline my planned research in specific relation to ongoing activities at MPIPKS.
+
+\clearpage 
+
+\noindent  {\LARGE{\textbf{Research Proposal}}} \\
+
+Concretely, I would like to propose three possible research directions, each associated with a different group at MPIPKS. Below, I specify the groups and briefly sketch the corresponding research ideas while also highlighting how they build on my two most relevant recent publications (marked by an asterisk in the list of publications above) and my existing research expertise.\\
+
+\textbf{Nonequilibrium Quantum Dynamics (Dr.~Marin Bukov)}: A recent publication by Schindler and Bukov introduced a geometric formulation of Floquet theory \cite{Geometric_Floquet}, thereby establishing a connection between nonequilibrium physics and geometric aspects of adiabatic time evolution. Notably, it provides a natural ordering of Floquet states, allowing for an unambiguous definition of a ground state in periodically driven systems. These insights open up several promising research directions \cite{Geometric_Floquet}—for example, further developing the link between these results and the theory of anomalous Floquet topology \cite{Anomalous_BBC}, or carrying out a more detailed characterization of the newly proposed Floquet ground states, including possible signatures of topological order such as long-range entanglement. My research experience encompasses anomalous Floquet topological phases \cite{Paper_IV}, the adiabatic dynamics of topological phases \cite{Paper_III, Paper_VI}, and broader expertise in gauge theory and topological aspects of fibre bundles, which I believe equips me well to contribute to these research endeavors. \\
+
+\textbf{Functional Quantum Matter (Dr.~Libor \v{S}mejkal)}: A key characteristic of altermagnetic band structures is a strong breaking of time-reversal symmetry and a resulting sizeable anomalous Hall conductance \cite{AM_1, AM_2}. My most recent publication \cite{Paper_VII} focuses on a topologically trivial band structure that exhibits an anomalous quantum Hall effect with $\sigma_{xy} \geq 0.5 e^2 / h$ across a large Fermi energy window, which can be nudged into a topologically stable quantum anomalous Hall phase with $\sigma_{xy} = e^2 / h$ at the onset of disorder. Exploring the effect of this mechanism on an altermagnetic system or identifying a concrete experimental platform within the realm of altermagnetic materials could be a compelling research direction. On a broader note, the interplay of Majorana physics and altermagnets has recently gained increasing attention \cite{AM_Majorana}. In this light, I would like to point out my previous research experience with Majorana  modes in a number-conserving system \cite{Paper_VI}.\\
+
+\textbf{Condensed Matter (Prof.~Dr.~Roderich Moessner)}: In \cite{Paper_VII}, as already outlined in the proposal above, it was demonstrated that an integer quantum Hall phase can be stabilized in a trivial band structure through a disorder potential. Building on this, a natural line for further research would be to complement the numerical studies conducted so far in \cite{Paper_VII} with an analytical understanding of the effect. More concretely, this could entail a calculation of real-space Green's functions in the presence of weak disorder and their topological characterization \cite{GF_topology} or a field-theoretical treatment of the system within the framework of replica theory \cite{Disordered_graphene, field_theory_disordered_CI}. Furthermore, this could confirm the important expectation formulated in \cite{Paper_VII} that an infinitesimal disorder amplitude should suffice for the stabilization of the integer quantum Hall phase, which is so far mostly based on the two-parameter scaling theory of the integer quantum Hall effect \cite{Khmelnitskii}. Another natural question regarding the quantum Hall effect without Chern bands \cite{Paper_VII} is ``where does the current flow?'', which has been addressed for Chern insulators in Ref.~\cite{Where_current} by Moessner and collaborators. 
+\renewcommand\refname{\normalsize References for Research Proposal}
+\begin{thebibliography}{10}
+\bibitem{Geometric_Floquet}
+P. M. Schindler and M. Bukov, {\em Geometric Floquet Theory}, 
+\href{https://journals.aps.org/prx/abstract/10.1103/7l91-gw77}{Phys. Rev. X {\bfseries{15}}, 031037 (2025)}.
+
+\bibitem{Anomalous_BBC}
+M. S. Rudner, N. H. Lindner, E. Berg, and M. Levin, {\em Anomalous Edge States and the Bulk-Edge Correspondence for Periodically Driven Two-Dimensional Systems}, \href{https://journals.aps.org/prx/abstract/10.1103/PhysRevX.3.031005}{Phys. Rev. X {\bf 3}, 031005 (2013)}.
+
+\bibitem{AM_1}
+L. \v{S}mejkal, R. González-Hernández, T. Jungwith, and J. Sinova,  {\em Crystal time-reversal symmetry breaking and spontaneous Hall effect in collinear antiferromagnets}, 
+\href{https://www.science.org/doi/10.1126/sciadv.aaz8809}{Science Advances {\bfseries{6}}, eaaz8809 (2020)}.
+
+\bibitem{AM_2}
+L. \v{S}mejkal, J. Sinova, and T. Jungwith, {\em Emerging Research Landscape of Altermagnetism}, 
+\href{https://journals.aps.org/prx/abstract/10.1103/PhysRevX.12.040501}{Phys. Rev. X {\bfseries{12}}, 040501 (2022)}.
+
+\bibitem{AM_Majorana}
+S. A. A. Ghorashi, T. L. Hughes, and J. Cano, {\em Altermagnetic Routes to Majorana Modes in Zero Net Magnetization}, \href{https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.133.106601}{Phys. Rev. Lett. {\bfseries{133}} (10), 106601 (2024)}.   
+
+
+\bibitem{GF_topology}
+Z. Wang and S.-C. Zhang, {\em Simplified Topological Invariants for Interacting Insulators}, \href{https://journals.aps.org/prx/abstract/10.1103/PhysRevX.2.031008}{Phys. Rev. X {\bfseries 2}, 031008 (2012)}
+
+\bibitem{Disordered_graphene}
+P. M. Ostrovsky, I. V. Gornyi1, and A. D. Mirlin, {\em Quantum Criticality and Minimal Conductivity in Graphene with Long-Range Disorder}, \href{https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.98.256801}{Phys. Rev. Lett. {\bfseries 98}, 256801 (2007)}.
+
+\bibitem{field_theory_disordered_CI}
+M. Moreno-Gonzalez, J. Dieplinger, and A. Altland, {\em Topological quantum criticality of the disordered Chern insulator}, \href{https://www.sciencedirect.com/science/article/pii/S000349162300043X?}{Annals of Physics {\bfseries 456}, 169258 (2023)}.
+
+\bibitem{Khmelnitskii}
+D. E. Khmelnitskii, {\em  Quantization of Hall conductivity}, \href{https://ui.adsabs.harvard.edu/abs/1983ZhPmR..38..454K/abstract}{ZhETF Pisma Redaktsiiu {\bfseries 38}, p. 454-458 (1983)}.
+
+\bibitem{Where_current}
+B. Douçot, D. Kovrizhin, and R. Moessner, {\em Meandering conduction channels and the tunable nature of quantized charge transport}, 
+\href{https://arxiv.org/abs/2406.08548}{arXiv:2406.08548 (2024)}.
+\end{thebibliography}
+
+\end{document}
+
