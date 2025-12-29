@@ -1,0 +1,436 @@
+\documentclass[ddcfooter, aspectratio=169, hyperref = {colorlinks,bookmarks=true,citecolor=blue,urlcolor=blue}]{beamer}
+\usepackage[utf8]{inputenc}  % Kodierung der Datei
+\usepackage[T1]{fontenc}  % Vollen Umfang der Schriftzeichen
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{nameref}
+\usepackage{isomath}
+\usepackage{upgreek}
+\usepackage{caption}
+\usepackage{bbm}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+
+\setbeamercolor{bibliography entry author}{fg=black}
+\setbeamercolor{bibliography entry title}{fg=black}
+\setbeamercolor{bibliography entry location}{fg=black}
+\setbeamercolor{bibliography entry note}{fg=black}
+
+%\usepackage{hyperref}
+%\usepackage[colorlinks,bookmarks=true,citecolor=blue,linkcolor=red,urlcolor=blue]{hyperref}
+
+
+\usepackage{bm}
+\usepackage{bbm}
+
+\usepackage{subcaption}
+
+%\usepackage{subfig}
+%\usepackage{floatrow}
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+
+%sinnvolle Abstände im Inhaltsverzeichnis
+\makeatletter
+\patchcmd{\beamer@sectionintoc}
+  {\vfill}
+  {\vskip\itemsep}
+  {}
+  {}
+\makeatother  
+
+% Custom command to obtain the currently active label (of section, subsection etc.)
+\makeatletter
+\newcommand*{\currentname}{\@currentlabelname}
+\makeatother
+
+%Bilder neben Text
+\newcommand{\lenitem}[2][.7\linewidth]{\parbox[t]{#1}{\strut #2\strut}}
+
+\usetheme{Frankfurt}
+\usecolortheme{beaver}
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{headline}{}
+
+
+\title[]{Previous research and future research plans}
+\author{{\textbf{Benjamin Michen}}}
+\date{07.01.2026}
+
+\titlegraphic{\includegraphics[width=3cm]{Images/TUD_logo}%\hspace*{4.75cm}
+%   \includegraphics[width=2cm]{Images/Grenoble_University.png}
+}
+
+% Insert slide with section name before each section
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\thesection~ \insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+
+
+
+
+\begin{document}
+\maketitle
+
+\begin{frame}{Overview}
+    \begin{columns}[onlytextwidth,T]
+        \begin{column}{.45\textwidth}
+           \tableofcontents[sections=1-3]
+        \end{column}
+        \pause
+        \begin{column}{.45\textwidth}
+           \tableofcontents[sections=4-5]
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\part{Previous Research}
+\frame{\partpage}  % Creates a part title page
+
+\section{Non-Hermitian physics from disorder and interactions}
+
+\begin{frame}
+\frametitle{\insertsectionhead}
+
+\textbf{Effective non-Hermitian Hamiltonians}
+
+\vspace{0.5em}
+\pause
+Take simple base Hamiltonian $H_0$ and add a perturbation $H_1$ (disorder, interaction...).
+
+\vspace{0.5em}
+\pause
+$\Rightarrow$ Retarded single-particle Green's function acquires self-energy correction
+
+\begin{alignat*}{2}
+H_0 \;\Rightarrow&& \; G_0 =&\; [\omega + i \eta - H_0]^{-1} \\
+H_0 + H_1 \;\Rightarrow&& \;G =&\; [\omega - \underbrace{(H_0 + \Sigma)}_{H_\mathrm{eff}}]^{-1}
+\end{alignat*}
+\pause
+Effective Hamiltonian usually non-Hermitian :
+\begin{alignat*}{2}
+H_\mathrm{eff}^\dagger \neq H_\mathrm{eff}
+\end{alignat*}
+\end{frame}
+
+\begin{frame}
+\frametitle{\insertsectionhead}
+
+\textbf{Exceptional points}
+
+\vspace{0.5em}
+
+$H_\mathrm{eff}(k)$ will generically have non-diagonalizable degeneracies!\blfootnote{B. Michen, T. Micallo, and J.C. Budich,
+\href{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.104.035413}{Phys. Rev. B {\bfseries{104}} (3), 035413 (2021)}}
+
+\vspace{1em}
+
+\begin{figure}
+  \begin{subfigure}{0.49\textwidth}  
+  \includegraphics[width= \textwidth]{Illustrations/EP_spec.png}
+  \subcaption*{Spectrum of disorder-induced $H_\mathrm{eff}(k)$.}
+  \end{subfigure}
+  \begin{subfigure}{0.49\textwidth}
+  \includegraphics[width= \textwidth]{Illustrations/Transport_EP.png}
+  \subcaption*{Transport signatures.}
+  \end{subfigure}
+\end{figure} 
+\end{frame}
+
+\begin{frame}
+\frametitle{\insertsectionhead}
+\textbf{Publications on exceptional non-Hermitian Physics}
+
+{\color{black}
+\begin{thebibliography}{Paper VII*}
+
+\bibitem[]{Paper_I}
+B. Michen, T. Micallo, and J.C. Budich, {\em Exceptional non-Hermitian phases in disordered quantum wires}, \href{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.104.035413}{Phys. Rev. B {\bfseries{104}} (3), 035413 (2021)}.
+
+\bibitem[]{Paper_II}
+B. Michen and J.C. Budich, {\em Mesoscopic transport signatures of disorder-induced non-Hermitian phases}, \href{https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.4.023248}{Phys. Rev. Res. {\bfseries{4}} (2), 023248 (2022)}.
+
+\bibitem[]{Paper_V}
+J. Schwardt, B. Michen, C. Lehmann, and J.C. Budich, {\em Exceptional Luttinger liquids from sublattice-dependent interaction}, \href{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.110.245146}{Phys. Rev. B {\bfseries{110}} (24), 245146 (2024)}.
+\end{thebibliography}}
+
+\end{frame}
+
+\section{Adiabatic preparation of fractional Chern insulators from an effective thin-torus limit}
+
+\begin{frame}
+\frametitle{\insertsectionhead}
+\textbf{\large The thin-torus limit of the fractional quantum Hall system \\}
+\vspace{0.5em}
+\pause
+Take FQH system on a Torus of $L_x \times L_y$ and send $L_x \to 0$
+{\center $\Rightarrow$ Thin-torus (TT) limit of the FQH system \\}
+\vspace{10 pt}
+
+\pause
+\begin{itemize}[<+->]
+	\item System becomes exactly solvable
+	\item TT ground states are charge-density waves, e.g., at filling $\nu = \frac{1}{2}$
+	\begin{align}
+	|GS_1\rangle = |101010...\rangle, \; \; 	|GS_2\rangle = |010101...\rangle  \nonumber
+	\end{align}	
+        \item The TT limit provides adiabatic connection between FQH state and CDW
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{\insertsectionhead}
+	\textbf{ \large Continuously changing the aspect ratio of a lattice model\\}
+	\begin{columns}[onlytextwidth,T]
+		\begin{column}{.6\textwidth}
+			\uncover<1->{
+			Tune effective aspect ratio through the hopping ratio! 
+			}
+			\uncover<2->{
+			\begin{align}
+			\frac{L_y}{L_x} \propto \sqrt{\frac{|J_x|}{|J_y|}} \nonumber
+			\end{align}
+			}
+			\uncover<3->{
+			{\center $\Rightarrow$ Use this to adiabatically approach the TT limit of an FCI! \\}
+			}
+		\end{column}
+		\begin{column}{.35\textwidth}
+		\uncover<0->{
+			\begin{figure}[htp!]	 
+				\centering 
+				\includegraphics[trim={0cm 0cm 0cm 0cm},clip, width=  \linewidth]{Images/Aspect_ratio.png} 
+			\end{figure}
+			}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{\insertsectionhead}
+	\textbf{\large The coupled wire model}	\\
+
+	\begin{columns}[onlytextwidth,T]
+		\begin{column}{.5\textwidth}
+\small
+			\begin{align}
+			H =& \sum_x \int_0^{N_y  l_B} \mathrm{d}y \left [ \Psi^\dagger_{x,y} \frac{\hat{p}_y^2}{2 m}\Psi_{x,y} +  \left( J e^{i \phi y}  \Psi^\dagger_{x,y} \Psi_{x +a,y} + \mathrm{H.c.} \right ) \right] \nonumber  \\
+			&+ U \sum_{y} \int_0^{N_s l_B}  \mathrm{d}x \Psi^\dagger_{x,y} \Psi^\dagger_{x,y} \Psi_{x,y} \Psi_{x,y}, \nonumber 
+			\end{align}
+			
+			Supports FCI state at filling $\nu = \frac{1}{2}$ of lowest band! 
+		\end{column}
+		\begin{column}{.35\textwidth}
+						\flushright
+			\begin{figure}[htp!]	 
+				\includegraphics[trim={-0.5cm -0.5cm 1.5cm 2.5cm}, width=  \linewidth]{Illustrations/coupled_wire_illustration.png} 
+			\end{figure}
+		\end{column}
+	\end{columns}
+	\blfootnote{B. Michen, C. Repellin, and J.C. Budich,
+\href{https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.5.023100}{Phys. Rev. Res. {\bfseries{5}} (2), 023100 (2023)}}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\insertsectionhead}
+	\begin{figure}[htp!]	 
+			\centering 
+			\includegraphics[trim={0cm 0cm 0cm 0cm}, width = 1 \linewidth]{Illustrations/ED_data_CW_complete.png} 
+			\caption*{ED data for energy gaps (left) and particle entanglement spectrum (right). \blfootnote{B. Michen, C. Repellin, and J.C. Budich,
+\href{https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.5.023100}{Phys. Rev. Res. {\bfseries{5}} (2), 023100 (2023)}}}
+	\end{figure}
+\end{frame}
+
+\section{Adiabatic preparation of a number-conserving Majorana phase}
+
+\begin{frame}
+\frametitle{\insertsectionhead}
+\textbf{\large One-dimensional Majorana phase in number-conserving setting \\}
+\vspace{0.5em}
+Two quantum wires with pair-hopping interaction: \blfootnote{C. V. Kraus, M. Dalmonte, M. A. Baranov, A. M. Läuchli, and P. Zoller, \href{https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.111.173004}{Phys. Rev. Lett. {\bfseries 111}, 173004 (2013)}.}
+\begin{align}
+H &= -t\sum_{\gamma = \mathrm{a,b}}\sum_{j = 1}^{L-1} \left[(c_{\gamma,j}^\dagger c_{\gamma,j+1} + c_{\gamma,j+1}^\dagger c_{\gamma,j}) \right] + W \sum_{j = 1}^{L-1} \left[c_{\mathrm{a},j}^\dagger c_{\mathrm{a},j+1}^\dagger c_{\mathrm{b},j} c_{\mathrm{b},j+1} + \text{H.c.} \right] \nonumber
+\end{align}
+\pause
+\begin{itemize}[<+->]
+	\item Stabilizes two ground states with opposite parity
+	\item Symmetry-protected by $\mathbb Z_2$ wire parity $P_a = (-1)^{N_a}$
+	\item Tradeoff: Only works at critical point (gap closing $\propto 1/L$)
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{\insertsectionhead}
+\textbf{\large State preparation strategy \\}
+\vspace{0.5em}
+Break parity symmetry through single-particle tunneling with flux $\phi$
+\begin{align}
+H_\phi &= r \sum_{j = 1}^L  \left[ e^{2 \pi i \phi j}c_{\mathrm{a},j}^\dagger c_{\mathrm{b},j} + e^{-2 \pi i \phi j}c_{\mathrm{b},j}^\dagger c_{\mathrm{a},j} \right]. \nonumber
+\end{align}
+\pause
+$\Rightarrow$ For flux $\phi = \nu$  commensurate with filling, this gaps out critical target state.
+\pause
+\vspace{1em}
+
+We start at finite value $r_0$ and ramp down to zero as power law:
+\begin{align}
+r_p(\tau) = r_{0} |1 -  \tau / \tau_\mathrm{tot}|^p, \quad \tau \in [0, \tau_\mathrm{tot}]. \nonumber
+\end{align}
+\pause
+$\Rightarrow$ Optimal scaling of preparation time $\tau_\mathrm{tot}(L)$ by increasing $p(L)$ with system size $L$.
+\end{frame}
+
+\begin{frame}
+	\frametitle{\insertsectionhead}
+	\begin{columns}[onlytextwidth,T]
+		\begin{column}{.45\textwidth}
+			\textbf{\large Full protocol}	\\
+			\vspace{0.5em}
+			\begin{itemize}[<+->]
+				\item Start from Mott state stabilized by staggered potential $\mu$
+				\item Turn on $W$, $t$ and r
+	                       \item Ramp down $r$ with power law in last stage ($p=1$ for illustration)
+			\end{itemize}
+		\end{column}
+		\begin{column}{.45\textwidth}
+						\flushright
+			\begin{figure}[htp!]	 
+				\includegraphics[trim={0cm 0cm 0cm 0cm}, width=  \linewidth]{Illustrations/gaps_protocol.pdf} 
+				\caption{DMRG data for excitation gaps.}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\blfootnote{B. Michen, T. Pokart, and J.C. Budich,
+\href{https://journals.aps.org/prb/abstract/10.1103/dqsb-nzx1}{Phys. Rev. B {\bfseries{112}} (4), 045112 (2025)}}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\insertsectionhead}
+	\begin{figure}[htp!]	 
+			\centering 
+			\includegraphics[trim={0cm 0cm 0cm 0cm}, width = 1 \linewidth]{Illustrations/sketch} 			
+	\end{figure}\blfootnote{B. Michen, T. Pokart, and J.C. Budich,
+\href{https://journals.aps.org/prb/abstract/10.1103/dqsb-nzx1}{Phys. Rev. B {\bfseries{112}} (4), 045112 (2025)}}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\insertsectionhead}
+	\begin{figure}[htp!]	 
+			\centering 
+			\includegraphics[trim={0cm 0cm 0cm 0.5cm}, width = 0.9 \linewidth]{Illustrations/compare_fidelity.pdf} 			
+			\caption*{(a) MPSTE data for fidelity achieved with flux term. Linear scaling $\tau_\mathrm{tot} \propto L$.\\		
+			 (b) Performance without flux is qualitatively worse, quadratic scaling $\tau_\mathrm{tot} \propto L^2$.} 
+	\end{figure}\blfootnote{B. Michen, T. Pokart, and J.C. Budich,
+\href{https://journals.aps.org/prb/abstract/10.1103/dqsb-nzx1}{Phys. Rev. B {\bfseries{112}} (4), 045112 (2025)}}
+\end{frame}
+
+\section{Non-Linear Interference Challenging Topological Protection of Chiral Edge States}
+
+\begin{frame}
+	\frametitle{\insertsectionhead}
+	\begin{columns}[onlytextwidth,T]
+		\begin{column}{.45\textwidth}
+			\textbf{\large Non-linear Floquet systems}	\\
+			\vspace{0.5em}
+	 Some interactions can be modeled as non-linear potential:
+\begin{align}
+i \frac{\mathrm d}{\mathrm d t} \psi_j(t) = \sum_{j'} H_F(j,j',t) \psi_{j'}(t) + \gamma |\psi_j(t)|^2 \psi_j(t). \nonumber
+\end{align}
+
+\begin{itemize}[<+->]
+\item Term $\propto \gamma$ can destroy topological edge states of $H_F(j,j',t)$ through scattering
+\item Relative phase acts as switch
+\end{itemize}
+		\end{column}
+		
+		\begin{column}{.45\textwidth}
+						\flushright
+			\begin{figure}[htp!]	 
+				\includegraphics[trim={0cm 0cm 1cm 0cm}, width=  \linewidth]{Illustrations/Floquet_illustration.png} 
+			\end{figure}
+		\end{column}
+	\end{columns}
+\blfootnote{B. Michen and J.C. Budich,
+\href{https://journals.aps.org/pra/abstract/10.1103/PhysRevA.108.L021501}{Phys. Rev. A {\bfseries{108}} (2), L021501 (2023)}}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\insertsectionhead}
+	\begin{figure}[htp!]	 
+			\centering 
+			\includegraphics[trim={0cm 0.5cm 0cm 1cm}, width = 0.85 \linewidth]{Illustrations/Minmal_Floquet_model.png} 			
+			\caption*{Floquet Hamiltonian in anomalous topological phase (realized recently in photonic crystals).} 
+	\end{figure}\vspace{-1.5em} \blfootnote{B. Michen and J.C. Budich,
+\href{https://journals.aps.org/pra/abstract/10.1103/PhysRevA.108.L021501}{Phys. Rev. A {\bfseries{108}} (2), L021501 (2023)}}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{\insertsectionhead}
+	\begin{columns}[onlytextwidth,T]
+		\begin{column}{.55\textwidth}
+			\textbf{\large Concrete approach}	\\
+			\vspace{0.5em}
+\begin{itemize}[<+->]
+\item Numerically solve non-linear dynamics as ODE with given initial conditions
+\item Continuity equation yields current $\phi_{\bm \delta, \bm j}(t)$ through lattice link
+\begin{align}
+\frac{\mathrm d}{\mathrm d t} |\psi_{\bm j}|^2 = \sum_{\bm \delta \in \mathrm {NN}} \underbrace{2 \mathrm {Im} [J_{\bm \delta} (t) \psi^*_{\bm j} \psi_{\bm j + \bm \delta}]}_{-\phi_{\bm \delta, \bm j}(t)} \nonumber
+\end{align}
+\item Pick link and integrate current over time $\phi_\mathrm{T} = \int_0^{10T} \phi_{\bm j, \bm \delta}(t) \mathrm d t$ to measure scattering 
+\end{itemize}
+\end{column}
+		
+		\begin{column}{.55\textwidth}
+						\flushright
+			\begin{figure}[htp!]	 
+				\includegraphics[trim={0cm 0cm 0cm 0cm}, width= 0.8 \linewidth]{Illustrations/phot_flux.png} 
+			\end{figure}
+		\end{column}
+	\end{columns}
+\blfootnote{B. Michen and J.C. Budich,
+\href{https://journals.aps.org/pra/abstract/10.1103/PhysRevA.108.L021501}{Phys. Rev. A {\bfseries{108}} (2), L021501 (2023)}}
+\end{frame}
+
+\section{Quantum Hall Effect without Chern Bands}
+
+\begin{frame}
+\frametitle{\insertsectionhead}
+\textbf{\large Hall conductance as a function of Fermi energy} \\
+\vspace{0.5em}
+For translation-invariant system with Bloch Hamiltonian $H(\bm k)$, eigenvectors $|u(\bm k) \rangle$, energies $E_{\bm k}$, and Berry curvature $\mathcal F = i [\langle \partial_{k_x} u| \partial_{k_y} u \rangle - \langle \partial_{k_y} u| \partial_{k_x} u \rangle]$, we have:
+\begin{align}
+\sigma_{xy}(E_\mathrm{F}) = \frac{e^2}{h} \frac{1}{2\pi}\int_{E_{\bm k}<E_\mathrm{F}}\mathrm{d}^2k \,  \mathcal F. \nonumber
+\end{align}
+
+\begin{itemize}[<+->]
+\item For $E_\mathrm{F}$ in band gap, $\sigma_{xy}$ is integer (Chern number)
+\item For $E_\mathrm{F}$ in band spectrum, $\sigma_{xy}$ takes continuous values
+\item Random disorder forces mobility gap and integer value of $\sigma_{xy}$ at any $E_\mathrm{F}$!
+\end{itemize}
+\end{frame}
+
+\end{document}
+
+\end{document}
+
+  

@@ -1,0 +1,126 @@
+%%%%%%%%%%%%%%%%% PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Change the font size of your document - 10pt, 12.1pt, etc.
+\documentclass[letterpaper,11pt,oneside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage[colorlinks, citecolor = blue, linkcolor = red, urlcolor = blue]{hyperref}
+\usepackage{comment}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{xcolor}
+
+\usepackage{graphicx}
+\graphicspath{ {images/}} %upload your signature to this file
+%Change the margins to fit your CV/resume content
+\usepackage[left=1in, right=1in, bottom=1.25in, top=1.25in]{geometry}
+
+%Skype information - include your Skype name for a link to add you on Skype
+\newcommand*{\Skype}{\href{skype:john.smith?add}{john.smith}} 
+\newcommand{\Absender}[1][\normalsize]{\Skype} 
+\newcommand{\fscv}{\normalsize} 
+
+%Changes the page numbers - {arabic}=arabic numerals, {gobble}=no page numbers, {roman}=Roman numerals
+\pagenumbering{gobble}
+
+%%%%%%%%%%%%%%%%% END OF PREAMBLE %%%%%%%%%%%%%%%%%%%%%
+\def\CC{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\bf ++}}}
+
+\begin{document}
+%%%%%%%%%%%%%%%%% NAME OF APPLICANT %%%%%%%%%%%%%%%%%%%
+
+\noindent  \LARGE{\textbf{Curriculum Vitae}} \\
+\noindent  \LARGE{\textbf{Benjamin Michen}} \\
+\vspace{-2ex} 
+\hrule 
+\normalsize
+
+%%%%%%%%%%%%%%%%% CONTACT INFORMATION %%%%%%%%%%%%%%%%%
+
+\begin{center}
+\begin{tabular}{r l r l}
+Date of birth: & September 2, 1996 & \hspace{0.25in} Email: & \href{mailto:benjamin.michen@gmx.de}{benjamin.michen@gmx.de} \\
+Address: & Clara-Viebig Str.~3, & \hspace{0.25in} Phone: & +49 178 8723598  \\
+& 01159 Dresden, Germany 
+\end{tabular}
+\end{center}
+
+\vspace{1em}
+
+%%%%%%%%%%%%%%%%% MAIN BODY %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \begin{tabular}{@{} l l }
+
+\fscv{Education} 
+& \textbf{Abitur} with overall grade 1.4 at J.-G.-Herder Gymnasium Pirna from 2013--2015. \\
+&\\
+& \textbf{BSc, Physics} with overall grade 1.6 at TU Dresden from 2016--2019. Bachelor’s \\
+& thesis ``Bulk Transport Properties of HgTe Nanostructures'' with Prof.~Carsten Timm.\\
+&\\
+& \textbf{MSc, Physics} with overall grade 1.0 at TU Dresden from 2019--2021. Master’s \\
+& thesis ``Disorder-Induced Exceptional Non-Hermitian Phases in Mesoscopic \\
+& Quantum Systems'' with Prof.~Jan Carl Budich.\\
+& \\
+& \textbf{PhD, Physics} at TU Dresden from 2021--2025 with Prof.~Jan Carl Budich. \\
+& Dissertation ``Nudging Quantum Matter over the Edge of Topological Order'' \\
+& submitted November 2025. Currently under review; defense anticipated in early 2026. \\
+& \\
+
+\fscv{Research} & \textbf{Quantum Many-Body Theory Group, TU Dresden} \\
+\fscv{Experience} 
+& Master’s and doctoral research in theoretical physics under Prof.~Budich, 2020--2025, \\
+& with a focus on adiabatic state preparation in quantum simulators and topological \\
+
+& phases.  See also the list of publications below.\\
+&\\
+
+\fscv{Teaching} & \textbf{Technische Universität Dresden} \\
+\fscv{Experience} & Teaching assistant for several theoretical physics classes. \\
+& \\
+\fscv{Languages} & German (native), English (fluent), Spanish (basic, level B1). \\
+\fscv{and Skills} 
+& Coding experience with Python, Julia, \CC, and Mathematica. \\
+& Experience using standard libraries for quantum physics, in particular ITensor, Kwant, \\
+& and QuSpin. \\
+& Experience with analytical methods for quantum many-body physics, such as \\
+& bosonization and perturbation theory. \\
+& Expertise in quantum information processing and quantum simulation.\\
+& Expertise in scientific writing.\\
+\\
+
+\fscv{Other} & Work \& Travel in New Zealand during gap year from 2015--2016.\\
+\fscv{Experience} 
+& Student job at Fraunhofer FEP Dresden from 2018--2021, responsible for carrying \\
+& out and documenting electron beam experiments and numerical simulations of \\
+& electromagnetic lenses.\\
+
+\end{tabular}
+
+\clearpage
+
+\renewcommand\refname{\LARGE List of Publications}
+
+\begin{thebibliography}{Paper VII*}
+
+\bibitem[Paper I]{Paper_I}
+B. Michen, T. Micallo, and J.C. Budich, {\em Exceptional non-Hermitian phases in disordered quantum wires}, \href{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.104.035413}{Phys. Rev. B {\bfseries 104} (3), 035413 (2021)}.
+
+\bibitem[Paper II]{Paper_II}
+B. Michen and J.C. Budich, {\em Mesoscopic transport signatures of disorder-induced non-Hermitian phases}, \href{https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.4.023248}{Phys. Rev. Res. {\bfseries 4} (2), 023248 (2022)}.
+
+\bibitem[Paper III]{Paper_III}
+B. Michen, C. Repellin, and J.C. Budich, {\em Adiabatic preparation of fractional Chern insulators from an effective thin-torus limit}, \href{https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.5.023100}{Phys. Rev. Res. {\bfseries 5} (2), 023100 (2023)}.
+
+\bibitem[Paper IV]{Paper_IV}
+B. Michen and J.C. Budich, {\em Nonlinear interference challenging topological protection of chiral edge states}, \href{https://journals.aps.org/pra/abstract/10.1103/PhysRevA.108.L021501}{Phys. Rev. A {\bfseries 108} (2), L021501 (2023)}.
+
+\bibitem[Paper V]{Paper_V}
+J. Schwardt, B. Michen, C. Lehmann, and J.C. Budich, {\em Exceptional Luttinger liquids from sublattice-dependent interaction}, \href{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.110.245146}{Phys. Rev. B {\bfseries 110} (24), 245146 (2024)}.
+
+\bibitem[Paper VI]{Paper_VI}
+B. Michen, T. Pokart, and J.C. Budich, {\em Adiabatic preparation of a number-conserving atomic Majorana phase}, Phys. Rev. B {\bfseries 112} (4), 045112 (2025). % DOI placeholder removed because invalid
+
+\bibitem[Paper VII]{Paper_VII}
+B. Michen and J.C. Budich, {\em Quantum Hall Effect without Chern Bands}, Phys. Rev. Lett. {\bfseries 135} (18), 186603 (2025). % DOI placeholder removed because invalid
+
+\end{thebibliography}
+
+\end{document}

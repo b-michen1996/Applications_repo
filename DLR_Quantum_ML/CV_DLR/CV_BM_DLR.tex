@@ -1,0 +1,115 @@
+%%%%%%%%%%%%%%%%% PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Ändern Sie die Schriftgröße Ihres Dokuments – 10pt, 12.1pt, etc.
+\documentclass[letterpaper,11pt,oneside, german]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage[colorlinks, citecolor = blue, linkcolor = red, urlcolor = blue]{hyperref}
+\usepackage{comment}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\usepackage{tabularx,ragged2e,booktabs,babel}
+
+\usepackage{graphicx}
+\graphicspath{ {images/}} %laden Sie Ihre Unterschrift in diesen Ordner hoch
+%Ändern Sie die Seitenränder passend zum Inhalt Ihres Lebenslaufs
+\usepackage[left=1in, right=1in, bottom=1.25in, top=1.25in]{geometry}
+
+%Skype-Informationen – geben Sie Ihren Skype-Namen für einen Link zur Kontaktaufnahme an
+\newcommand*{\Skype}{\href{skype:john.smith?add}{john.smith}} 
+\newcommand{\Absender}[1][\normalsize]{\Skype} 
+\newcommand{\fscv}{\normalsize} 
+
+%Ändert die Seitenzahlen – {arabic}=arabische Ziffern, {gobble}=keine Seitenzahlen, {roman}=Römische Ziffern
+\pagenumbering{gobble}
+
+%%%%%%%%%%%%%%%%% END OF PREAMBLE %%%%%%%%%%%%%%%%%%%%%
+\def\CC{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\bf ++}}}
+
+\begin{document}
+%%%%%%%%%%%%%%%%% NAME OF APPLICANT %%%%%%%%%%%%%%%%%%%
+
+\noindent  \LARGE{\textbf{Lebenslauf}} \\
+\noindent  \LARGE{\textbf{Benjamin Michen}} \\
+\vspace{-2ex} 
+\hrule 
+\normalsize
+
+%%%%%%%%%%%%%%%%% CONTACT INFORMATION %%%%%%%%%%%%%%%%%
+
+\begin{center}
+\begin{tabular}{r l r l}
+Geburtsdatum: & 2.~September 1996 & \hspace{0.25in} E-Mail: & \href{mailto:benjamin.michen@gmx.de}{benjamin.michen@gmx.de} \\
+Adresse: & Clara-Viebig-Str.~3, & \hspace{0.25in} Telefon: & 0178 8723598  \\
+& 01159 Dresden, Deutschland 
+\end{tabular}
+\end{center}
+
+%%%%%%%%%%%%%%%%% MAIN BODY %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \begin{tabular}{@{} l >{\raggedright\arraybackslash}p{0.85\textwidth} }
+\fscv{Ausbildung} 
+& \textbf{Abitur} mit Gesamtnote 1,4 am J.-G.-Herder-Gymnasium Pirna, 2013–2015. \\
+&\\
+& \textbf{B.Sc.\ Physik} mit Gesamtnote 1,6 an der TU Dresden, 2016–2019. \\
+& Bachelorarbeit „Bulk Transport Properties of HgTe Nanostructures'' bei Prof.~Carsten Timm.\\
+&\\
+& \textbf{M.Sc.\ Physik} mit Gesamtnote 1,0 an der TU Dresden, 2019–2021. \\
+& Masterarbeit „Disorder-Induced Exceptional Non-Hermitian Phases in Mesoscopic Quantum Systems'' bei Prof.~Jan Carl Budich.\\
+& \\
+& \textbf{Promotion Physik} an der TU Dresden, 2021–2025, bei Prof.~Jan Carl Budich. \\
+& Dissertation „Nudging Quantum Matter over the Edge of Topological Order'', eingereicht im November 2025. Derzeit im Begutachtungsverfahren; Verteidigung voraussichtlich Anfang 2026. \\
+& \\
+\fscv{Forschungs-} & \textbf{Professur für Quanten-Vielteilchentheorie, TU Dresden, 2020--2025} \\
+\fscv{erfahrung} & Mathematische und numerische Modellierung der Physik wechselwirkender Quantenvielteilchensysteme bei tiefen Temperaturen unter Prof.~Jan Carl Budich mit Schwerpunkten auf adiabatischer Zustandspräparation in Quantensimulatoren, Transporteffekten und topologischen Phasen. Siehe hierzu auch die Publikationsliste weiter unten. \\
+&\\
+& \textbf{Fraunhofer FEP Dresden, 2018--2021} \\
+& Tätigkeit als studentischer Mitarbeiter für die Durchführung und Dokumentation von Elektronenstrahl-Experimenten sowie für numerische Simulationen elektromagnetischer Linsen mittels Finite-Elemente-Methoden. \\
+&\\
+\fscv{Lehr-} & \textbf{TU Dresden} \\
+\fscv{erfahrung} & Übungsleiter für mehrere Lehrveranstaltungen der theoretischen Physik. \\
+\\
+\fscv{Sprachen und} & Deutsch (Muttersprache), Englisch (fließend), Spanisch (Niveau B1). \\
+\fscv{Fähigkeiten} 
+& Programmiererfahrung in Python, Julia, \CC, und Mathematica. \\
+& Numerische Methoden für physikalisch motivierte Problemstellungen. \\
+& Expertise in Quanteninformationsverarbeitung und Quantensimulation.\\
+& Expertise im wissenschaftlichen Schreiben.\\
+\\
+\fscv{Weitere} & Work \& Travel in Neuseeland im Rahmen eines Gap Years, 2015–2016.\\
+\fscv{Erfahrung} 
+
+\end{tabular}
+
+\clearpage
+
+\renewcommand\refname{\LARGE Publikationsliste}
+
+
+\begin{thebibliography}{Paper VII*}
+
+\bibitem[Paper I]{Paper_I}
+B. Michen, T. Micallo, and J.C. Budich, {\em Exceptional non-Hermitian phases in disordered quantum wires}, \href{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.104.035413}{Phys. Rev. B {\bfseries{104}} (3), 035413 (2021)}.
+
+\bibitem[Paper II]{Paper_II}
+B. Michen and J.C. Budich, {\em Mesoscopic transport signatures of disorder-induced non-Hermitian phases}, \href{https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.4.023248}{Phys. Rev. Res. {\bfseries{4}} (2), 023248 (2022)}.
+
+\bibitem[Paper III]{Paper_III}
+B. Michen, C. Repellin, and J.C. Budich, {\em Adiabatic preparation of fractional Chern insulators from an effective thin-torus limit}, \href{https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.5.023100}{Phys. Rev. Res. {\bfseries{5}} (2), 023100 (2023)}.
+
+\bibitem[Paper IV]{Paper_IV}
+B. Michen and J.C. Budich, {\em Nonlinear interference challenging topological protection of chiral edge states}, \href{https://journals.aps.org/pra/abstract/10.1103/PhysRevA.108.L021501}{Phys. Rev. A {\bfseries{108}} (2), L021501 (2023)}.
+
+\bibitem[Paper V]{Paper_V}
+J. Schwardt, B. Michen, C. Lehmann, and J.C. Budich, {\em Exceptional Luttinger liquids from sublattice-dependent interaction}, \href{https://journals.aps.org/prb/abstract/10.1103/PhysRevB.110.245146}{Phys. Rev. B {\bfseries{110}} (24), 245146 (2024)}.
+
+\bibitem[Paper VI]{Paper_VI}
+B. Michen, T. Pokart, and J.C. Budich, {\em Adiabatic preparation of a number-conserving atomic Majorana phase}, \href{https://journals.aps.org/prb/abstract/10.1103/dqsb-nzx1}{Phys. Rev. B {\bfseries{112}} (4), 045112 (2025)}.
+
+\bibitem[Paper VII]{Paper_VII}
+B. Michen and J.C. Budich, {\em Quantum Hall Effect without Chern Bands}, \href{https://journals.aps.org/prl/abstract/10.1103/dgd8-4gzf}{Phys. Rev. Lett. {\bfseries{135}} (18), 186603 (2025)}.   
+
+\end{thebibliography}
+
+\end{document}
