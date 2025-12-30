@@ -12,6 +12,9 @@
 \usepackage{mathrsfs}
 \usepackage{amsmath}
 
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
 \setbeamercolor{bibliography entry author}{fg=black}
 \setbeamercolor{bibliography entry title}{fg=black}
 \setbeamercolor{bibliography entry location}{fg=black}
@@ -280,14 +283,14 @@ H &= -t\sum_{\gamma = \mathrm{a,b}}\sum_{j = 1}^{L-1} \left[(c_{\gamma,j}^\dagge
 
 \begin{frame}
 \frametitle{\insertsectionhead}
-\textbf{\large State preparation strategy \\}
+\textbf{\large Strategy to prepare critical target state \\}
 \vspace{0.5em}
-Break parity symmetry through single-particle tunneling with flux $\phi$
+Break parity symmetry by interwire tunneling with flux $\phi$ to create energy gap 
 \begin{align}
 H_\phi &= r \sum_{j = 1}^L  \left[ e^{2 \pi i \phi j}c_{\mathrm{a},j}^\dagger c_{\mathrm{b},j} + e^{-2 \pi i \phi j}c_{\mathrm{b},j}^\dagger c_{\mathrm{a},j} \right]. \nonumber
 \end{align}
 \pause
-$\Rightarrow$ For flux $\phi = \nu$  commensurate with filling, this gaps out critical target state.
+$\Rightarrow$ Crucial: flux commensurate with filling $\phi = \nu$ (explained through bosonization)
 \pause
 \vspace{1em}
 
@@ -428,6 +431,113 @@ For translation-invariant system with Bloch Hamiltonian $H(\bm k)$, eigenvectors
 \item Random disorder forces mobility gap and integer value of $\sigma_{xy}$ at any $E_\mathrm{F}$!
 \end{itemize}
 \end{frame}
+
+\begin{frame}
+\frametitle{\insertsectionhead}
+\textbf{\large Setup for new physics in minimal two-band model} \\
+\vspace{0.5em}
+\begin{itemize}[<+->]
+\item Construct $\hat H_0$ with trivial ($\mathcal C = 0$) bands but $\sigma_{xy}(E_\mathrm{F}) \geq 0.5 e^2 / h$ in large $E_\mathrm{F}$ window
+\item Add random disorder with amplitude $W$:
+\begin{align*}
+\hat H = \hat H_0 + \hat W.
+\end{align*}
+\item Probe transport properties using Kwant package
+\end{itemize}
+\vspace{0.5em}
+$\Rightarrow$ Disorder stabilizes $\sigma_{xy} = e^2 / h$. IQHE in trivial band structure!
+\end{frame}
+
+\begin{frame}
+	\frametitle{\insertsectionhead}
+	\begin{figure}[htp!]	 
+			\centering 
+			\includegraphics[trim={0cm 0cm 0cm 0.5cm}, width = 0.9 \linewidth]{Illustrations/QHE_wo_CB.png} 			
+			\caption*{(a) Band structure of $\hat H_0$. (b) 4-terminal Hall conductance clean and with disorder.} 
+	\end{figure}\blfootnote{B. Michen and J. C. Budich,
+\href{https://journals.aps.org/prl/abstract/10.1103/dgd8-4gzf}{Phys. Rev. Lett. {\bfseries{135}} (18), 186603 (2025)}}
+\vspace{-1em}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\insertsectionhead}
+
+	
+	\begin{columns}[onlytextwidth,T]
+		\begin{column}{.45\textwidth}
+			\textbf{\large Distinction from topological Anderson insulator}	\\
+			\vspace{0.5em}
+\begin{itemize}[<+->]
+\item In thermodynamic limit, any disorder $W > 0$ should suffice
+\item Continuity equation yields current $\phi_{\bm \delta, \bm j}(t)$ through lattice link
+\begin{align}
+\frac{\mathrm d}{\mathrm d t} |\psi_{\bm j}|^2 = \sum_{\bm \delta \in \mathrm {NN}} \underbrace{2 \mathrm {Im} [J_{\bm \delta} (t) \psi^*_{\bm j} \psi_{\bm j + \bm \delta}]}_{-\phi_{\bm \delta, \bm j}(t)} \nonumber
+\end{align}
+\item Pick link and integrate current over time $\phi_\mathrm{T} = \int_0^{10T} \phi_{\bm j, \bm \delta}(t) \mathrm d t$ to measure scattering 
+\end{itemize}
+\end{column}
+		
+		\begin{column}{.55\textwidth}
+						\flushright
+			\begin{figure}[htp!]	 
+				\includegraphics[trim={0cm 0cm 0cm 0cm}, width= 1 \linewidth]{Illustrations/transport_W_EF.png} 
+			\end{figure}
+		\end{column}
+	\end{columns}
+\blfootnote{B. Michen and J. C. Budich,
+\href{https://journals.aps.org/prl/abstract/10.1103/dgd8-4gzf}{Phys. Rev. Lett. {\bfseries{135}} (18), 186603 (2025)}}
+\end{frame}
+
+\begin{frame}
+\frametitle{\insertsectionhead}
+\textbf{\large Finite size effects} \\
+\vspace{0.5em}
+
+\begin{minipage}{0.52\textwidth}
+\begin{itemize}[<+->]
+\item In thermodynamic limit, any disorder $W > 0$ should suffice
+\item Large window with IQH phase opens immediately
+\item distinction from TAI!
+\item More stuff
+\item this yields an intriguing order of limits problem between localization length and disorder ampolitude $W$!
+\end{itemize}
+\end{minipage}%
+\hfill
+\begin{minipage}{0.45\textwidth}
+\includegraphics[width=\linewidth]{Illustrations/transport_W_EF.png}
+\end{minipage}
+
+\blfootnote{B. Michen and J. C. Budich,
+\href{https://journals.aps.org/prl/abstract/10.1103/dgd8-4gzf}{Phys. Rev. Lett. {\bfseries{135}} (18), 186603 (2025)}}
+\end{frame}
+
+\begin{frame}[t]
+\frametitle{\insertsectionhead}
+\textbf{\large Finite size effects}
+\vspace{0.5em}
+
+\begin{wrapfigure}{r}{0.45\textwidth}
+\vspace{-2\baselineskip}
+\includegraphics[width=\linewidth]{Illustrations/transport_W_EF.png}
+\vspace{-\baselineskip}
+\end{wrapfigure}
+
+\mbox{}% Force wrapfigure to start
+
+\begin{itemize}[<+->]
+\item In thermodynamic limit, any disorder $W > 0$ should suffice
+\item Large window with IQH phase opens immediately
+\item distinction from TAI!
+\item More stuff
+\item this yields an intriguing order of limits problem between localization length and disorder ampolitude $W$!
+\end{itemize}
+
+\vspace*{\fill}% Add space to prevent overflow
+
+\blfootnote{B. Michen and J. C. Budich,
+\href{https://journals.aps.org/prl/abstract/10.1103/dgd8-4gzf}{Phys. Rev. Lett. {\bfseries{135}} (18), 186603 (2025)}}
+\end{frame}
+
 
 \end{document}
 
