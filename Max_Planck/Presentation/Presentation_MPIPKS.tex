@@ -462,84 +462,55 @@ $\Rightarrow$ Disorder stabilizes $\sigma_{xy} = e^2 / h$. IQHE in trivial band 
 \begin{frame}
 	\frametitle{\insertsectionhead}
 
-	
-	\begin{columns}[onlytextwidth,T]
-		\begin{column}{.45\textwidth}
-			\textbf{\large Distinction from topological Anderson insulator}	\\
-			\vspace{0.5em}
-\begin{itemize}[<+->]
-\item In thermodynamic limit, any disorder $W > 0$ should suffice
-\item Continuity equation yields current $\phi_{\bm \delta, \bm j}(t)$ through lattice link
-\begin{align}
-\frac{\mathrm d}{\mathrm d t} |\psi_{\bm j}|^2 = \sum_{\bm \delta \in \mathrm {NN}} \underbrace{2 \mathrm {Im} [J_{\bm \delta} (t) \psi^*_{\bm j} \psi_{\bm j + \bm \delta}]}_{-\phi_{\bm \delta, \bm j}(t)} \nonumber
-\end{align}
-\item Pick link and integrate current over time $\phi_\mathrm{T} = \int_0^{10T} \phi_{\bm j, \bm \delta}(t) \mathrm d t$ to measure scattering 
-\end{itemize}
+\begin{columns}[onlytextwidth,T]
+\begin{column}{.45\textwidth}
+\textbf{\large Finite size effects}	\\
+\vspace{0.5em}	
+	\begin{itemize}[<+->]
+		\item For $L \to \infty$, any $W > 0$ stabilizes large IQH window
+		\item Key difference to topological Anderson insulator!
+		\item $W \to 0$ means diverging localization length \\
+		$\Rightarrow$ Order-of-limits problem between $W \to 0$ and $L \to \infty$
+	\end{itemize}
+\end{column}	
+\begin{column}{.55\textwidth}
+	\flushright
+	\begin{figure}[htp!]	 
+	\includegraphics[trim={-0.1cm 0cm 2.5cm 0cm}, width= 1 \linewidth]{Illustrations/transport_W_EF.png} 
+	\caption*{Two-terminal transport along $x$-direction. (a) OBC along $y$, (b) PBC along $y$. Inset: Finite size scaling.}
+	\end{figure}
 \end{column}
-		
-		\begin{column}{.55\textwidth}
-						\flushright
-			\begin{figure}[htp!]	 
-				\includegraphics[trim={0cm 0cm 0cm 0cm}, width= 1 \linewidth]{Illustrations/transport_W_EF.png} 
-			\end{figure}
-		\end{column}
-	\end{columns}
+\end{columns}
 \blfootnote{B. Michen and J. C. Budich,
 \href{https://journals.aps.org/prl/abstract/10.1103/dgd8-4gzf}{Phys. Rev. Lett. {\bfseries{135}} (18), 186603 (2025)}}
+\end{frame}
+
+\section{Future research}
+
+\begin{frame}
+\frametitle{\insertsectionhead}
+\textbf{\large More on the QHE without Chern bands}
+	\begin{itemize}[<+->]
+		\item Tackle order-of-limits problem by calculating real-space GF for weak disorder
+		\begin{align*}
+		\left \langle \bm r \left | [E_\mathrm{F} - (\hat H_0 + \hat W) + i \eta]^{-1} \right | \bm r' \right \rangle \propto e^{-|\bm r- \bm r'| / \xi}
+		\end{align*}
+		\item Topological characterization of GFs (can we show that $\sigma_{xy} > 0.5 e^2 / h$ always becomes $\sigma_{xy} = e^2 / h$) for small $W$?
+		\item Replica theory treatment (Pruisken's field theory)?
+		\item Interplay with altermagnetic physics?
+	\end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{\insertsectionhead}
-\textbf{\large Finite size effects} \\
-\vspace{0.5em}
+\textbf{\large Floquet topology}
 
-\begin{minipage}{0.52\textwidth}
-\begin{itemize}[<+->]
-\item In thermodynamic limit, any disorder $W > 0$ should suffice
-\item Large window with IQH phase opens immediately
-\item distinction from TAI!
-\item More stuff
-\item this yields an intriguing order of limits problem between localization length and disorder ampolitude $W$!
-\end{itemize}
-\end{minipage}%
-\hfill
-\begin{minipage}{0.45\textwidth}
-\includegraphics[width=\linewidth]{Illustrations/transport_W_EF.png}
-\end{minipage}
-
-\blfootnote{B. Michen and J. C. Budich,
-\href{https://journals.aps.org/prl/abstract/10.1103/dgd8-4gzf}{Phys. Rev. Lett. {\bfseries{135}} (18), 186603 (2025)}}
+	\begin{itemize}[<+->]
+		\item Define Floquet ground states? \footnote{P. M. Schindler and M. Bukov, \emph{Geometric Floquet Theory},
+\href{https://journals.aps.org/prx/abstract/10.1103/7l91-gw77}{PRX {\bfseries{15}} (3), 031037 (2025)}}
+	\end{itemize}
 \end{frame}
 
-\begin{frame}[t]
-\frametitle{\insertsectionhead}
-\textbf{\large Finite size effects}
-\vspace{0.5em}
-
-\begin{wrapfigure}{r}{0.45\textwidth}
-\vspace{-2\baselineskip}
-\includegraphics[width=\linewidth]{Illustrations/transport_W_EF.png}
-\vspace{-\baselineskip}
-\end{wrapfigure}
-
-\mbox{}% Force wrapfigure to start
-
-\begin{itemize}[<+->]
-\item In thermodynamic limit, any disorder $W > 0$ should suffice
-\item Large window with IQH phase opens immediately
-\item distinction from TAI!
-\item More stuff
-\item this yields an intriguing order of limits problem between localization length and disorder ampolitude $W$!
-\end{itemize}
-
-\vspace*{\fill}% Add space to prevent overflow
-
-\blfootnote{B. Michen and J. C. Budich,
-\href{https://journals.aps.org/prl/abstract/10.1103/dgd8-4gzf}{Phys. Rev. Lett. {\bfseries{135}} (18), 186603 (2025)}}
-\end{frame}
-
-
-\end{document}
 
 \end{document}
 
