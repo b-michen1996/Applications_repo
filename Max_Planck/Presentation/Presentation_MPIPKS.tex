@@ -181,7 +181,7 @@ J. Schwardt, B. Michen, C. Lehmann, and J.C. Budich, {\em Exceptional Luttinger 
 \textbf{\large The thin-torus limit of the fractional quantum Hall system \\}
 \vspace{0.5em}
 \pause
-Take FQH system on a Torus of $L_x \times L_y$ and send $L_x \to 0$
+For FQH system on a Torus of $L_x \times L_y$ send $L_x \to 0$ (while keeping total flux $B L_x L_y$ constant):
 {\center $\Rightarrow$ Thin-torus (TT) limit of the FQH system \\}
 \vspace{10 pt}
 
@@ -239,7 +239,11 @@ Take FQH system on a Torus of $L_x \times L_y$ and send $L_x \to 0$
 			&+ U \sum_{y} \int_0^{N_s l_B}  \mathrm{d}x \Psi^\dagger_{x,y} \Psi^\dagger_{x,y} \Psi_{x,y} \Psi_{x,y}, \nonumber 
 			\end{align}
 			
-			Supports FCI state at filling $\nu = \frac{1}{2}$ of lowest band! 
+	\begin{itemize}[<+->]
+		\item Supports FCI state at filling $\nu = \frac{1}{2}$ of lowest band! 
+		\item For large interwire hopping $J$, the FCI state becomes a CDW. Analytical solution possible!
+	\end{itemize}
+			
 		\end{column}
 		\begin{column}{.35\textwidth}
 						\flushright
@@ -503,11 +507,20 @@ $\Rightarrow$ Disorder stabilizes $\sigma_{xy} = e^2 / h$. IQHE in trivial band 
 
 \begin{frame}
 \frametitle{\insertsectionhead}
-\textbf{\large Floquet topology}
+\textbf{\large Research on Geometric Floquet Theory}
+\vspace{0.5em}	
+
+Decomposition of periodic Hamiltonian 
+\begin{align*}
+H(t) = H_{\mathcal K}(t) + A_{\mathcal K}(t) 
+\end{align*}
+allows for unique ordering of Floquet states\footnote[1]{P. M. Schindler and M. Bukov, \emph{Geometric Floquet Theory},
+\href{https://journals.aps.org/prx/abstract/10.1103/7l91-gw77}{PRX {\bfseries{15}} (3), 031037 (2025)}} according to average energies of $H_{\mathcal K}$.
+\vspace{0.5em}	
 
 	\begin{itemize}[<+->]
-		\item Define Floquet ground states? \footnote{P. M. Schindler and M. Bukov, \emph{Geometric Floquet Theory},
-\href{https://journals.aps.org/prx/abstract/10.1103/7l91-gw77}{PRX {\bfseries{15}} (3), 031037 (2025)}}
+		\item Characterization of Floquet ground states (topological long-range entanglement and degeneracy?) 
+		\item Further develop link between geometric Floquet theory and anomalous Floquet topological states
 	\end{itemize}
 \end{frame}
 
