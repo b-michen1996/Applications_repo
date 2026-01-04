@@ -15,6 +15,8 @@
 \usepackage{graphicx}
 \usepackage{wrapfig}
 
+\usepackage{comment}
+
 \setbeamercolor{bibliography entry author}{fg=black}
 \setbeamercolor{bibliography entry title}{fg=black}
 \setbeamercolor{bibliography entry location}{fg=black}
@@ -90,18 +92,6 @@
 \begin{document}
 \maketitle
 
-\begin{frame}{Overview}
-    \begin{columns}[onlytextwidth,T]
-        \begin{column}{.45\textwidth}
-           \tableofcontents[sections=1-3]
-        \end{column}
-        \pause
-        \begin{column}{.45\textwidth}
-           \tableofcontents[sections=4-5]
-        \end{column}
-    \end{columns}
-\end{frame}
-
 \part{Previous Research}
 \frame{\partpage}  % Creates a part title page
 
@@ -121,8 +111,8 @@ Take simple base Hamiltonian $H_0$ and add a perturbation $H_1$ (disorder, inter
 $\Rightarrow$ Retarded single-particle Green's function acquires self-energy correction
 
 \begin{alignat*}{2}
-H_0 \;\Rightarrow&& \; G_0 =&\; [\omega + i \eta - H_0]^{-1} \\
-H_0 + H_1 \;\Rightarrow&& \;G =&\; [\omega - \underbrace{(H_0 + \Sigma)}_{H_\mathrm{eff}}]^{-1}
+H_0 \;\Rightarrow&& \; G_0^R =&\; [\omega + i \eta - H_0]^{-1} \\
+H_0 + H_1 \;\Rightarrow&& \;G^R =&\; [\omega - \underbrace{(H_0 + \Sigma)}_{H_\mathrm{eff}}]^{-1}
 \end{alignat*}
 \pause
 Effective Hamiltonian usually non-Hermitian :
@@ -181,7 +171,7 @@ J. Schwardt, B. Michen, C. Lehmann, and J.C. Budich, {\em Exceptional Luttinger 
 \textbf{\large The thin-torus limit of the fractional quantum Hall system \\}
 \vspace{0.5em}
 \pause
-For FQH system on a Torus of $L_x \times L_y$ send $L_x \to 0$ (while keeping total flux $B L_x L_y$ constant):
+For FQH system on a torus of $L_x \times L_y$ send $L_x \to 0$ (while keeping total flux $B L_x L_y$ constant):
 {\center $\Rightarrow$ Thin-torus (TT) limit of the FQH system \\}
 \vspace{10 pt}
 
@@ -239,7 +229,7 @@ For FQH system on a Torus of $L_x \times L_y$ send $L_x \to 0$ (while keeping to
 			&+ U \sum_{y} \int_0^{N_s l_B}  \mathrm{d}x \Psi^\dagger_{x,y} \Psi^\dagger_{x,y} \Psi_{x,y} \Psi_{x,y}, \nonumber 
 			\end{align}
 			
-	\begin{itemize}[<+->]
+	\begin{itemize}[<+(1)->]
 		\item Supports FCI state at filling $\nu = \frac{1}{2}$ of lowest band! 
 		\item For large interwire hopping $J$, the FCI state becomes a CDW. Analytical solution possible!
 	\end{itemize}
@@ -261,7 +251,7 @@ For FQH system on a Torus of $L_x \times L_y$ send $L_x \to 0$ (while keeping to
 	\begin{figure}[htp!]	 
 			\centering 
 			\includegraphics[trim={0cm 0cm 0cm 0cm}, width = 1 \linewidth]{Illustrations/ED_data_CW_complete.png} 
-			\caption*{ED data for energy gaps (left) and particle entanglement spectrum (right). \blfootnote{B. Michen, C. Repellin, and J.C. Budich,
+			\caption*{Left panel: ED data for energy gaps with analytical solution in green. Right panel: particle entanglement spectrum. \blfootnote{B. Michen, C. Repellin, and J.C. Budich,
 \href{https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.5.023100}{Phys. Rev. Res. {\bfseries{5}} (2), 023100 (2023)}}}
 	\end{figure}
 \end{frame}
@@ -277,10 +267,11 @@ Two quantum wires with pair-hopping interaction: \blfootnote{C. V. Kraus, M. Dal
 H &= -t\sum_{\gamma = \mathrm{a,b}}\sum_{j = 1}^{L-1} \left[(c_{\gamma,j}^\dagger c_{\gamma,j+1} + c_{\gamma,j+1}^\dagger c_{\gamma,j}) \right] + W \sum_{j = 1}^{L-1} \left[c_{\mathrm{a},j}^\dagger c_{\mathrm{a},j+1}^\dagger c_{\mathrm{b},j} c_{\mathrm{b},j+1} + \text{H.c.} \right] \nonumber
 \end{align}
 \pause
-\begin{itemize}[<+->]
-	\item Stabilizes two ground states with opposite parity
-	\item Symmetry-protected by $\mathbb Z_2$ wire parity $P_a = (-1)^{N_a}$
-	\item Tradeoff: Only works at critical point (gap closing $\propto 1/L$)
+\begin{itemize}[<+(1)->]
+	\item Stabilizes two ground states with opposite wire parity $P_a = (-1)^{N_a}$
+	\item $\mathbb Z_2$ symmetry-protected by $P_a $ 
+	\item Tradeoff: Only works at critical point (gap closing $\propto 1/L$)\\
+	$\Rightarrow$ Challenge for state preparation!
 \end{itemize}
 
 \end{frame}
@@ -289,12 +280,13 @@ H &= -t\sum_{\gamma = \mathrm{a,b}}\sum_{j = 1}^{L-1} \left[(c_{\gamma,j}^\dagge
 \frametitle{\insertsectionhead}
 \textbf{\large Strategy to prepare critical target state \\}
 \vspace{0.5em}
-Break parity symmetry by interwire tunneling with flux $\phi$ to create energy gap 
+Break symmetry $P_a = (-1)^{N_a}$ by interwire tunneling with flux $\phi$ to create energy gap 
 \begin{align}
 H_\phi &= r \sum_{j = 1}^L  \left[ e^{2 \pi i \phi j}c_{\mathrm{a},j}^\dagger c_{\mathrm{b},j} + e^{-2 \pi i \phi j}c_{\mathrm{b},j}^\dagger c_{\mathrm{a},j} \right]. \nonumber
 \end{align}
 \pause
-$\Rightarrow$ Crucial: flux commensurate with filling $\phi = \nu$ (explained through bosonization)
+$\Rightarrow$ Crucial: flux commensurate with filling $\phi = \nu$ (explained through bosonization, confirmed through DMRG)\blfootnote{B. Michen, T. Pokart, and J.C. Budich,
+\href{https://journals.aps.org/prb/abstract/10.1103/dqsb-nzx1}{Phys. Rev. B {\bfseries{112}} (4), 045112 (2025)}}
 \pause
 \vspace{1em}
 
@@ -303,9 +295,10 @@ We start at finite value $r_0$ and ramp down to zero as power law:
 r_p(\tau) = r_{0} |1 -  \tau / \tau_\mathrm{tot}|^p, \quad \tau \in [0, \tau_\mathrm{tot}]. \nonumber
 \end{align}
 \pause
-$\Rightarrow$ Optimal scaling of preparation time $\tau_\mathrm{tot}(L)$ by increasing $p(L)$ with system size $L$.
+$\Rightarrow$ Optimal linear scaling of preparation time $\tau_\mathrm{tot}(L)$ by increasing $p(L)$ with system size $L$.
 \end{frame}
 
+\begin{comment}
 \begin{frame}
 	\frametitle{\insertsectionhead}
 	\begin{columns}[onlytextwidth,T]
@@ -329,6 +322,8 @@ $\Rightarrow$ Optimal scaling of preparation time $\tau_\mathrm{tot}(L)$ by incr
 \blfootnote{B. Michen, T. Pokart, and J.C. Budich,
 \href{https://journals.aps.org/prb/abstract/10.1103/dqsb-nzx1}{Phys. Rev. B {\bfseries{112}} (4), 045112 (2025)}}
 \end{frame}
+\end{comment}
+
 
 \begin{frame}
 	\frametitle{\insertsectionhead}
@@ -345,7 +340,7 @@ $\Rightarrow$ Optimal scaling of preparation time $\tau_\mathrm{tot}(L)$ by incr
 			\centering 
 			\includegraphics[trim={0cm 0cm 0cm 0.5cm}, width = 0.9 \linewidth]{Illustrations/compare_fidelity.pdf} 			
 			\caption*{(a) MPSTE data for fidelity achieved with flux term. Linear scaling $\tau_\mathrm{tot} \propto L$.\\		
-			 (b) Performance without flux is qualitatively worse, quadratic scaling $\tau_\mathrm{tot} \propto L^2$.} 
+			 (b) Performance without flux hopping is qualitatively worse, quadratic scaling $\tau_\mathrm{tot} \propto L^2$.} 
 	\end{figure}\blfootnote{B. Michen, T. Pokart, and J.C. Budich,
 \href{https://journals.aps.org/prb/abstract/10.1103/dqsb-nzx1}{Phys. Rev. B {\bfseries{112}} (4), 045112 (2025)}}
 \end{frame}
@@ -362,9 +357,8 @@ $\Rightarrow$ Optimal scaling of preparation time $\tau_\mathrm{tot}(L)$ by incr
 \begin{align}
 i \frac{\mathrm d}{\mathrm d t} \psi_j(t) = \sum_{j'} H_F(j,j',t) \psi_{j'}(t) + \gamma |\psi_j(t)|^2 \psi_j(t). \nonumber
 \end{align}
-
-\begin{itemize}[<+->]
-\item Term $\propto \gamma$ can destroy topological edge states of $H_F(j,j',t)$ through scattering
+\begin{itemize}[<+(1)->]
+\item Nonlinear term can destroy topological edge states of $H_F(j,j',t)$ through scattering
 \item Relative phase acts as switch
 \end{itemize}
 		\end{column}
@@ -397,7 +391,7 @@ i \frac{\mathrm d}{\mathrm d t} \psi_j(t) = \sum_{j'} H_F(j,j',t) \psi_{j'}(t) +
 		\begin{column}{.55\textwidth}
 			\textbf{\large Concrete approach}	\\
 			\vspace{0.5em}
-\begin{itemize}[<+->]
+\begin{itemize}[<+(1)->]
 \item Numerically solve non-linear dynamics as ODE with given initial conditions
 \item Continuity equation yields current $\phi_{\bm \delta, \bm j}(t)$ through lattice link
 \begin{align}
@@ -429,7 +423,7 @@ For translation-invariant system with Bloch Hamiltonian $H(\bm k)$, eigenvectors
 \sigma_{xy}(E_\mathrm{F}) = \frac{e^2}{h} \frac{1}{2\pi}\int_{E_{\bm k}<E_\mathrm{F}}\mathrm{d}^2k \,  \mathcal F. \nonumber
 \end{align}
 
-\begin{itemize}[<+->]
+\begin{itemize}[<+(1)->]
 \item For $E_\mathrm{F}$ in band gap, $\sigma_{xy}$ is integer (Chern number)
 \item For $E_\mathrm{F}$ in band spectrum, $\sigma_{xy}$ takes continuous values
 \item Random disorder forces mobility gap and integer value of $\sigma_{xy}$ at any $E_\mathrm{F}$!
@@ -440,7 +434,7 @@ For translation-invariant system with Bloch Hamiltonian $H(\bm k)$, eigenvectors
 \frametitle{\insertsectionhead}
 \textbf{\large Setup for new physics in minimal two-band model} \\
 \vspace{0.5em}
-\begin{itemize}[<+->]
+\begin{itemize}[<+(1)->]
 \item Construct $\hat H_0$ with trivial ($\mathcal C = 0$) bands but $\sigma_{xy}(E_\mathrm{F}) \geq 0.5 e^2 / h$ in large $E_\mathrm{F}$ window
 \item Add random disorder with amplitude $W$:
 \begin{align*}
@@ -449,7 +443,9 @@ For translation-invariant system with Bloch Hamiltonian $H(\bm k)$, eigenvectors
 \item Probe transport properties using Kwant package
 \end{itemize}
 \vspace{0.5em}
-$\Rightarrow$ Disorder stabilizes $\sigma_{xy} = e^2 / h$. IQHE in trivial band structure!
+\pause
+$\Rightarrow$ Disorder stabilizes $\sigma_{xy} = e^2 / h$. IQHE in trivial band structure!\blfootnote{B. Michen and J. C. Budich,
+\href{https://journals.aps.org/prl/abstract/10.1103/dgd8-4gzf}{Phys. Rev. Lett. {\bfseries{135}} (18), 186603 (2025)}}
 \end{frame}
 
 \begin{frame}
@@ -470,7 +466,7 @@ $\Rightarrow$ Disorder stabilizes $\sigma_{xy} = e^2 / h$. IQHE in trivial band 
 \begin{column}{.45\textwidth}
 \textbf{\large Finite size effects}	\\
 \vspace{0.5em}	
-	\begin{itemize}[<+->]
+	\begin{itemize}[<+(1)->]
 		\item For $L \to \infty$, any $W > 0$ stabilizes large IQH window
 		\item Key difference to topological Anderson insulator!
 		\item $W \to 0$ means diverging localization length \\
@@ -480,8 +476,8 @@ $\Rightarrow$ Disorder stabilizes $\sigma_{xy} = e^2 / h$. IQHE in trivial band 
 \begin{column}{.55\textwidth}
 	\flushright
 	\begin{figure}[htp!]	 
-	\includegraphics[trim={-0.1cm 0cm 2.5cm 0cm}, width= 1 \linewidth]{Illustrations/transport_W_EF.png} 
-	\caption*{Two-terminal transport along $x$-direction. (a) OBC along $y$, (b) PBC along $y$. Inset: Finite size scaling.}
+	\includegraphics[trim={-0.1cm 0cm 2.5cm 1cm}, width= 1 \linewidth]{Illustrations/transport_W_EF.png} 
+	\caption*{Two-terminal transport along $x$-direction for system size $N_x = 600$, $N_y = 150$. (a) OBC along $y$, (b) PBC along $y$. Inset: Finite size scaling.}
 	\end{figure}
 \end{column}
 \end{columns}
@@ -494,6 +490,7 @@ $\Rightarrow$ Disorder stabilizes $\sigma_{xy} = e^2 / h$. IQHE in trivial band 
 \begin{frame}
 \frametitle{\insertsectionhead}
 \textbf{\large More on the QHE without Chern bands}
+\pause
 	\begin{itemize}[<+->]
 		\item Tackle order-of-limits problem by calculating real-space GF for weak disorder
 		\begin{align*}
@@ -517,11 +514,20 @@ H(t) = H_{\mathcal K}(t) + A_{\mathcal K}(t)
 allows for unique ordering of Floquet states\footnote[1]{P. M. Schindler and M. Bukov, \emph{Geometric Floquet Theory},
 \href{https://journals.aps.org/prx/abstract/10.1103/7l91-gw77}{PRX {\bfseries{15}} (3), 031037 (2025)}} according to average energies of $H_{\mathcal K}$.
 \vspace{0.5em}	
-
+\pause
 	\begin{itemize}[<+->]
 		\item Characterization of Floquet ground states (topological long-range entanglement and degeneracy?) 
 		\item Further develop link between geometric Floquet theory and anomalous Floquet topological states
 	\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \Large{Thank you for your attention!}
+  \end{beamercolorbox}
+  \vfill
 \end{frame}
 
 
